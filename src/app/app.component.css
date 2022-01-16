@@ -1,0 +1,9 @@
+.nav-bar{
+    background-color: blue;
+    height: 100px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 60px;
+}
