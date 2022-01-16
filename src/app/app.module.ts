@@ -7,6 +7,7 @@ import { GithubAppComponent } from './github-app/github-app.component';
 import { GithubProfileComponent } from './github-profile/github-profile.component';
 import { GithubProfileDataComponent } from './github-profile-data/github-profile-data.component';
 import { GithubProfileReposComponent } from './github-profile-repos/github-profile-repos.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -19,7 +20,9 @@ import { GithubProfileReposComponent } from './github-profile-repos/github-profi
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
