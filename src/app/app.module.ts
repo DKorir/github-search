@@ -8,6 +8,8 @@ import { GithubProfileComponent } from './github-profile/github-profile.componen
 import { GithubProfileDataComponent } from './github-profile-data/github-profile-data.component';
 import { GithubProfileReposComponent } from './github-profile-repos/github-profile-repos.component';
 import { FormsModule } from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http'
+
 
 
 @NgModule({
@@ -21,7 +23,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
 
   ],
   providers: [],

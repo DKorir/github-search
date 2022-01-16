@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class GithubAppComponent implements OnInit {
   public githubUserQuery!:string;
   public searchUser(){
-    
+
   }
 
   constructor() { }
@@ -17,3 +17,4 @@ export class GithubAppComponent implements OnInit {
   }
 
 }
+//https://api.github.com/users/thenaveensaggam
