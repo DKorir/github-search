@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SearchService } from '../search.service';
 
 @Component({
   selector: 'app-homepage',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomepageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private myService:SearchService) { }
 
   ngOnInit(): void {
+    this.myService.user().subscribe((gitResults:any)=>{
+      console.log("Results",gitResults)
+    })
   }
 
 }
