@@ -8,7 +8,8 @@ import { GithubProfileComponent } from './github-profile/github-profile.componen
 import { GithubProfileDataComponent } from './github-profile-data/github-profile-data.component';
 import { GithubProfileReposComponent } from './github-profile-repos/github-profile-repos.component';
 import { FormsModule } from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http';
+import { NavBarComponent } from './nav-bar/nav-bar.component'
 
 
 
@@ -18,13 +19,14 @@ import {HttpClientModule} from '@angular/common/http'
     GithubAppComponent,
     GithubProfileComponent,
     GithubProfileDataComponent,
-    GithubProfileReposComponent
+    GithubProfileReposComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
 
   ],
   providers: [],
