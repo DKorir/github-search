@@ -10,7 +10,8 @@ import { GithubProfileReposComponent } from './github-profile-repos/github-profi
 import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
-import { ErrorComponent } from './error/error.component'
+import { ErrorComponent } from './error/error.component';
+import { NotfoundComponent } from './notfound/notfound.component';
 
 
 
@@ -22,7 +23,8 @@ import { ErrorComponent } from './error/error.component'
     GithubProfileDataComponent,
     GithubProfileReposComponent,
     NavBarComponent,
-    ErrorComponent
+    ErrorComponent,
+    NotfoundComponent,
   ],
   imports: [
     BrowserModule,

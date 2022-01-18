@@ -8,7 +8,8 @@ import { GithubProfileComponent } from './github-profile/github-profile.componen
 const routes: Routes = [
   {path:'home', component:GithubAppComponent},
   {path:'user', component:GithubProfileComponent},
-  {path:'repos', component:GithubProfileReposComponent},
+  {path:'repos', component:GithubProfileReposComponent} 
+
 ];
 
 @NgModule({
