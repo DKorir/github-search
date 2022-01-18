@@ -17,4 +17,11 @@ export class SearchService {
       })
     );
   }
+  //repos
+  fetchRepos(){
+    return this.http.get('https://api.github.com/users/' +this.githubusername +'/repos?client_id=' +'&client_secret' +environment.gitApi).pipe(map((repoResults:any)=>{
+      return repoResults;
+    })
+    );
+  }
 }
