@@ -1,15 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { GithubAppComponent } from './github-app/github-app.component';
-import { GithubProfileDataComponent } from './github-profile-data/github-profile-data.component';
-import { GithubProfileReposComponent } from './github-profile-repos/github-profile-repos.component';
-import { GithubProfileComponent } from './github-profile/github-profile.component';
+import { HomepageComponent } from './homepage/homepage.component';
+import { NotfoundComponent } from './notfound/notfound.component';
+import { RepoComponent } from './repo/repo.component';
+import { UserComponent } from './user/user.component';
 
 const routes: Routes = [
-  {path:'home', component:GithubAppComponent},
-  {path:'user', component:GithubProfileComponent},
-  {path:'repos', component:GithubProfileReposComponent} 
+  {path:'home', component:HomepageComponent},
+  {path:'user', component:UserComponent},
+  {path:'repo', component:RepoComponent},
 
+
+
+  {path:'', redirectTo:'home', pathMatch:'full'},
+  {path:'**',component:NotfoundComponent},
 ];
 
 @NgModule({
