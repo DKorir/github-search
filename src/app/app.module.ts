@@ -9,7 +9,8 @@ import { GithubProfileDataComponent } from './github-profile-data/github-profile
 import { GithubProfileReposComponent } from './github-profile-repos/github-profile-repos.component';
 import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
-import { NavBarComponent } from './nav-bar/nav-bar.component'
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { ErrorComponent } from './error/error.component'
 
 
 
@@ -20,7 +21,8 @@ import { NavBarComponent } from './nav-bar/nav-bar.component'
     GithubProfileComponent,
     GithubProfileDataComponent,
     GithubProfileReposComponent,
-    NavBarComponent
+    NavBarComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
