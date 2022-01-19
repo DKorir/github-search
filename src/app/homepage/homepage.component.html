@@ -23,10 +23,14 @@
         <div class="col-md-8" class="repositories">
             <h1>                <h3 style="text-align: center;">{{userResults.login}}: Public Repositories</h3></h1>
             <hr style="color: blue; height: 3px; font-weight: bold;">
-            <div class="description">
-                <h3>Name: {{repositoryResults.name}} </h3>
-                <h4>Description: {{repositoryResults.description}} </h4>
-                <h3>Created on: {{repositoryResults.create_at|date}} </h3>
+            <div class="description" *ngFor="let repositoryResult of repositoryResults">
+                <h3>Name: {{repositoryResult.name}} </h3>
+                <h4>Description: {{repositoryResult.description}} </h4>
+                <h3>Created on: {{repositoryResult.created_at|date}} </h3>
+                <a href="{{repositoryResult.html_url}}">
+                    <button class="btn btn-secondary">View Online </button>
+                </a>
+
             </div>
 
 

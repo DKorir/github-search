@@ -24,6 +24,8 @@ export class HomepageComponent implements OnInit {
     //repos
     this.myService.fetchRepos().subscribe((repositoryResults:any)=>{
       this.repositoryResults=repositoryResults
+      console.log("Repositories" ,repositoryResults);
+      
     })
   }
 

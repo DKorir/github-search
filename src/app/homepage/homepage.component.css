@@ -1,5 +1,6 @@
 .repositories{
     border: solid 1px black;
     max-width: 700px;
-    height: fit-content;
+    height: 800px;
+    overflow:scroll;
 }

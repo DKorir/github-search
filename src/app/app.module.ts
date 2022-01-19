@@ -11,6 +11,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { RepoComponent } from './repo/repo.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { HomepageComponent } from './homepage/homepage.component';
+import { FormSearchComponent } from './form-search/form-search.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { HomepageComponent } from './homepage/homepage.component';
     NavBarComponent,
     RepoComponent,
     NotfoundComponent,
-    HomepageComponent
+    HomepageComponent,
+    FormSearchComponent
   ],
   imports: [
     BrowserModule,
