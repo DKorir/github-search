@@ -4,3 +4,18 @@
     height: 800px;
     overflow:scroll;
 }
+.img{
+    height: 300px;
+    width: 300px;
+    background-color: blue;
+    padding: 10%;
+}
+.data{
+    height: 400px;
+    width: 300px;
+    background-color: blue;
+    padding: 10%;
+    border-bottom-right-radius: 28px;
+    color: white;
+    font-weight: bold;
+}

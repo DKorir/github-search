@@ -8,6 +8,11 @@ import { User } from './user';
   providedIn: 'root'
 })
 export class SearchService {
+  users!: User;
+  username!: string;
+  UpdateUser(username: string) {
+    throw new Error('Method not implemented.');
+  }
   githubusername:string="DKorir"
 
   constructor(private http:HttpClient) {
@@ -30,4 +35,11 @@ export class SearchService {
     })
     );
   }
+  //after
+  // UpdateUser(username:string){
+  //   this.username = username;
+  // }
+  // getUser(){
+  //   return this.http.get("https://api.github.com/users/" + this.username +"?client_id=" +"&client_secret")
+  // }
 }
