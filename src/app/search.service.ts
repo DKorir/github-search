@@ -12,7 +12,7 @@ export class SearchService {
   users!: User;
   username!: string;
   githubusername:string="DKorir"
-  tockens = environment.gitApi;
+  personalTockens = environment.apiKey;
   searchrepositories: any;
 
   constructor(private http:HttpClient) {
@@ -22,7 +22,7 @@ export class SearchService {
 
 
   user(){
-    return this.http.get('https://api.github.com/users/' + this.githubusername + '?client_id' +'client_secret=' +this.tockens).pipe(
+    return this.http.get('https://api.github.com/users/' + this.githubusername + '?client_id' +'client_secret=' +this.personalTockens).pipe(
       map((results: any)=>{
         return results;
       })
@@ -30,7 +30,7 @@ export class SearchService {
   }
   //repos
   fetchRepos(){
-    return this.http.get('https://api.github.com/users/' +this.githubusername +'/repos?client_id=' +'&client_secret' +this.tockens).pipe(map((repoResults:any)=>{
+    return this.http.get('https://api.github.com/users/' +this.githubusername +'/repos?client_id=' +'&client_secret' +this.personalTockens).pipe(map((repoResults:any)=>{
       return repoResults;
     })
     );
@@ -40,7 +40,7 @@ export class SearchService {
     this.username = username;
   }
   updateUser(){
-    return this.http.get("https://api.github.com/users/" + this.username +"?client_id=" +"&client_secret" +this.tockens)
+    return this.http.get("https://api.github.com/users/" + this.username +"?client_id=" +"&client_secret" +this.personalTockens)
   }
 
 
@@ -48,7 +48,7 @@ export class SearchService {
 
   findRepos(rname: any) {
     let mise = new Promise<void>((resolve,) => {
-      this.http.get('https://api.github.com/users/' +rname +'/repos?client_id=' +this.tockens)
+      this.http.get('https://api.github.com/users/' +rname +'/repos?client_id=' +this.personalTockens)
         .toPromise().then((response:any) => {
             this.searchrepositories= response;
             resolve();
