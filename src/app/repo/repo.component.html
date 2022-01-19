@@ -5,9 +5,9 @@
         <button type="submit" style="color: white;"  class="btn btn-warning">SEARCH</button><br><br>
     </form>         
     <div class="row" style="border-color: rgb(229, 234, 236);" *ngIf="repository">
-        <div class="repo-content" *ngFor="let repoos of fetchrrr; ">
+        <div class="repo-content" *ngFor="let repoos of fetchrepos; ">
             <div class="name-repo">
-                <h5 >Name: <strong><span appStyleDirective ><u>{{ repoos.name }}</u></span></strong></h5>
+                <h5 style="text-transform:uppercase ;">Name: <strong><span appStyleDirective ><u>{{ repoos.name }}</u></span></strong></h5>
             </div>
             <div class="desc-repo">
                 <h5> Description: {{ repoos.description }}</h5>
@@ -19,7 +19,7 @@
                 <h5> Created On:<strong>{{ repoos.created_at | date }}</strong></h5>
             </div>
             <div class="date-repo">
-                <h5> Created: <span>{{ repoos.created_at | timeTrack }}</span></h5>
+                <h5> Posted: <span style="font-weight: lighter;">{{ repoos.created_at | timeTrack }}</span></h5>
             </div>
             <div class="view-online">
                 <a href="{{repoos.html_url}}">

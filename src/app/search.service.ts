@@ -12,7 +12,7 @@ export class SearchService {
   username!: string;
 
   githubusername:string="DKorir"
-  srepoos: any;
+  searchrepositories: any;
 
   constructor(private http:HttpClient) {
     // this.users = new User('','','',0,'', new Date(), 0, 0);
@@ -52,7 +52,7 @@ export class SearchService {
        +environment.gitApi
         )
         .toPromise().then((response:any) => {
-            this.srepoos= response;
+            this.searchrepositories= response;
             resolve();
           }
         );

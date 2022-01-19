@@ -8,7 +8,7 @@ import { SearchService } from '../search.service';
   styleUrls: ['./repo.component.css']
 })
 export class RepoComponent implements OnInit {
-  fetchrrr!:any;
+  fetchrepos!:any;
   fetched!: string;
   repository = false;
 
@@ -24,7 +24,7 @@ export class RepoComponent implements OnInit {
     this.fetched = this.searchRepoForm.value.search;
     
     this.myService.findSearchRep(this.fetched).then((response:any) => {
-        this.fetchrrr = this.myService.srepoos;
+        this.fetchrepos = this.myService.searchrepositories;
         this.repository = true;
       }
     );
