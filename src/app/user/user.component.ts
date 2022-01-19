@@ -17,8 +17,8 @@ export class UserComponent implements OnInit {
 
 
   searchUser(){
-    this.myService.UpdateUser(this.username);
-    this.myService.getUser().subscribe((user:any)=>{
+    this.myService.Updates(this.username);
+    this.myService.updateUser().subscribe((user:any)=>{
       console.log(user);
       this.user = user;
     });

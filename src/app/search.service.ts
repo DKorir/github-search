@@ -1,4 +1,5 @@
 import { HttpClient } from '@angular/common/http';
+import { CoreEnvironment } from '@angular/compiler/src/compiler_facade_interface';
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs';
 import { environment } from 'src/environments/environment';
@@ -10,8 +11,8 @@ import { User } from './user';
 export class SearchService {
   users!: User;
   username!: string;
-
   githubusername:string="DKorir"
+  tockens = environment.gitApi;
   searchrepositories: any;
 
   constructor(private http:HttpClient) {
@@ -21,7 +22,7 @@ export class SearchService {
 
 
   user(){
-    return this.http.get('https://api.github.com/users/' + this.githubusername + '?client_id' +'client_secret=' +environment.gitApi).pipe(
+    return this.http.get('https://api.github.com/users/' + this.githubusername + '?client_id' +'client_secret=' +this.tockens).pipe(
       map((results: any)=>{
         return results;
       })
@@ -29,17 +30,17 @@ export class SearchService {
   }
   //repos
   fetchRepos(){
-    return this.http.get('https://api.github.com/users/' +this.githubusername +'/repos?client_id=' +'&client_secret' +environment.gitApi).pipe(map((repoResults:any)=>{
+    return this.http.get('https://api.github.com/users/' +this.githubusername +'/repos?client_id=' +'&client_secret' +this.tockens).pipe(map((repoResults:any)=>{
       return repoResults;
     })
     );
   }
  // after
-  UpdateUser(username:string){
+  Updates(username:string){
     this.username = username;
   }
-  getUser(){
-    return this.http.get("https://api.github.com/users/" + this.username +"?client_id=" +"&client_secret")
+  updateUser(){
+    return this.http.get("https://api.github.com/users/" + this.username +"?client_id=" +"&client_secret" +this.tockens)
   }
 
 
@@ -47,10 +48,7 @@ export class SearchService {
 
   findRepos(rname: any) {
     let mise = new Promise<void>((resolve,) => {
-      this.http.get('https://api.github.com/users/' +
-      rname +'/repos?client_id='
-       +environment.gitApi
-        )
+      this.http.get('https://api.github.com/users/' +rname +'/repos?client_id=' +this.tockens)
         .toPromise().then((response:any) => {
             this.searchrepositories= response;
             resolve();
