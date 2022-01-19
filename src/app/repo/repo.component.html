@@ -19,7 +19,7 @@
                 <h5> Created On:<strong>{{ repoos.created_at | date }}</strong></h5>
             </div>
             <div class="date-repo">
-                <h5> Created<strong>{{ repoos.created_at | timeTrack }}</strong></h5>
+                <h5> Created: <span>{{ repoos.created_at | timeTrack }}</span></h5>
             </div>
             <div class="view-online">
                 <a href="{{repoos.html_url}}">
