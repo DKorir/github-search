@@ -18,6 +18,9 @@
             <div class="date-repo">
                 <h5> Created On:<strong>{{ repoos.created_at | date }}</strong></h5>
             </div>
+            <div class="date-repo">
+                <h5> Created<strong>{{ repoos.created_at | timeTrack }}</strong></h5>
+            </div>
             <div class="view-online">
                 <a href="{{repoos.html_url}}">
                     <button class="btn btn-secondary" style="background-color: blue; font-weight: bold;">View Online </button>
