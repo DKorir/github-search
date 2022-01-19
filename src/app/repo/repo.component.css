@@ -16,6 +16,14 @@
 .container .form-input button{
     height: 2.3em;
     background-color: blue;
-    color: white;
+    /* color: white; */
     font-weight: bold;
+}
+.repo-content{
+    width: 30%;
+    border: solid;
+    border-color: red;
+    border-width: 2px;
+    margin: 20px;
+    padding: 10px;
 }
