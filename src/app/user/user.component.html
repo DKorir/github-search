@@ -1,1 +1,20 @@
-<app-form-search></app-form-search>
+<form>
+    <div class="form-group">
+        <label>Github Username:></label>
+        <input  type="text" name="search" [(ngModel)]='username' (keyup)="findUser()" >
+    </div>
+
+</form>
+<div class="card-header">
+    Username: {{user.login}}
+</div>
+<div class="display">
+    <div class="list-group">
+        <li class="list-group-item"><strong>Username:</strong> <img src="{{user.avatar}}" alt=""></li>
+        <li class="list-group-item"><strong>Following:</strong> {{user.following}}</li>
+        <li class="list-group-item"><strong>Email:</strong> {{user.email}}</li>
+        <li class="list-group-item"><strong>Location:</strong> {{user.location}}</li>
+        <li class="list-group-item"><strong>Repositories:</strong> {{user.public_repos}}</li>
+        <li class="list-group-item"><strong>created on:</strong> {{user.created_at}}</li>
+    </div>
+</div>

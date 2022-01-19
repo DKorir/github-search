@@ -28,7 +28,7 @@ import { FormSearchComponent } from './form-search/form-search.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule,
+    HttpClientModule
   
 
   ],
