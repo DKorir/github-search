@@ -17,9 +17,9 @@ export class HomepageComponent implements OnInit {
 
   ngOnInit(): void {
     //profile
-    this.myService.user().subscribe((gitResults:any)=>{
-      this.userResults=gitResults
-      console.log("Results",gitResults)
+    this.myService.user().subscribe((githubResults:any)=>{
+      this.userResults=githubResults
+      console.log("Results",githubResults)
     })
     //repos
     this.myService.fetchRepos().subscribe((repositoryResults:any)=>{

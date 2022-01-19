@@ -9,10 +9,10 @@ import { SearchService } from '../search.service';
 })
 export class RepoComponent implements OnInit {
   fetchrepos!:any;
-  fetched!: string;
+  fetchedrepos!: string;
   repository = false;
 
-  constructor(private myService:SearchService) { }
+  constructor(private myRepos:SearchService) { }
 
   ngOnInit(): void {
 
@@ -21,10 +21,10 @@ export class RepoComponent implements OnInit {
   @ViewChild('formInputs') searchRepoForm!: NgForm;
 
   Rep() {
-    this.fetched = this.searchRepoForm.value.search;
+    this.fetchedrepos = this.searchRepoForm.value.search;
     
-    this.myService.findSearchRep(this.fetched).then((response:any) => {
-        this.fetchrepos = this.myService.searchrepositories;
+    this.myRepos.findRepos(this.fetchedrepos).then((response:any) => {
+        this.fetchrepos = this.myRepos.searchrepositories;
         this.repository = true;
       }
     );

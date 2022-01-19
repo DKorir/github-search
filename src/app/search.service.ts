@@ -45,7 +45,7 @@ export class SearchService {
 
 
 
-  findSearchRep(rname: any) {
+  findRepos(rname: any) {
     let mise = new Promise<void>((resolve,) => {
       this.http.get('https://api.github.com/users/' +
       rname +'/repos?client_id='

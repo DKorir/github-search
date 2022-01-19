@@ -1,0 +1,14 @@
+.list-group{
+    text-align: center;
+    width: 200px;
+}
+.form-group input{
+    font-weight: bold;
+    text-align: center;
+    border-radius: 8px;
+}
+label{
+    color: blue;
+    font-weight: bold;
+    margin-right: 2px;
+}

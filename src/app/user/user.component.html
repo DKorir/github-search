@@ -1,17 +1,24 @@
-<form>
-    <div class="form-group">
-        <label>Github Username:></label>
-        <input  type="text" name="search" [(ngModel)]='username' (keyup)="findUser()" >
-    </div>
-
-</form>
-<div class="display">
-    <div class="list-group">
-        <li class="list-group-item"><strong>Profile:</strong> <img src="{{user.avatar_url}}" alt=""></li>
-        <li class="list-group-item"><strong>Following:</strong> {{user.following}}</li>
-        <li class="list-group-item"><strong>Email:</strong> {{user.email?user.email:"No email Found"}}</li>
-        <li class="list-group-item"><strong>Location:</strong> {{user.location?user.location:"No Location Found"}}</li>
-        <li class="list-group-item"><strong>Repositories:</strong> {{user.public_repos}}</li>
-        <li class="list-group-item"><strong>created on:</strong> {{user.created_at}}</li>
+<div class="container">
+    <form>
+        <div class="form-group">
+            <label>GITHUB USERNAME:</label>
+            <input  type="text" name="search" [(ngModel)]='username' (keyup)="searchUser()" >
+        </div>
+    </form><br><br>
+    <div class="display" *ngIf="user">
+            <div class="row" style="justify-content: center;"><br><br>
+                <div class="col-md-4" style="height: 247px; background-color: lightgray; padding-top: 40px;padding-left: 100px;position: relative;">
+                    <img class="profile-img" src="{{user.avatar_url}}" height="170px" width="170px" style="border-radius: 50%;" alt="">
+                    <h2 style="color: blue;"><strong> {{user.name}} </strong></h2>
+                </div>
+                <div class="col-md-4" style="height: 300px;">
+                    <li class="list-group-item"><strong>Following:</strong> {{user.following}}</li>
+                    <li class="list-group-item"><strong>Email:</strong> {{user.email?user.email:"No email Found"}}</li>
+                    <li class="list-group-item"><strong>Location:</strong> {{user.location?user.location:"No Location Found"}}</li>
+                    <li class="list-group-item"><strong>Repositories:</strong> {{user.public_repos}}</li>
+                    <li class="list-group-item"><strong>Created on:</strong> {{user.created_at |date}}</li>
+                    <li class="list-group-item"><strong>Created:</strong> {{user.created_at|timeTrack}}</li>                </div>
+                </div>
     </div>
 </div>
+
