@@ -1,6 +1,33 @@
 # GithubSearch
+## Author
+DOMINIC KORIR
+## Description
+Github app allows the user to search for username and find user data and repositories
+### Prerequisites
+You need to have git,angular CLI installed
+You can install it with the following command in your terminal
+`$ sudo apt install git-all`
+`$ npm install -g @angular/cli`
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.1.
+
+### Setup
+To access this project on your local files, you can clone it using these steps
+1. Open your terminal
+1. Use this command to clone `$  'https://dkorir.github.io/Quotes-App/'
+1. This will clone the repositoty into your local folder
+1. _Enjoy :)_
+### Technologies Used
+1. HTML
+1. CSS
+1. Git
+1. Bootstrap
+1. JavaScript
+1. jQuery
+1. AngularJs
+### Live Site
+View [live](https://dkorir.github.io/github-search/)
+
+This project was generated with [Angular CLI](https://dkorir.github.io/github-search/) version 13.1.1.
 
 ## Development server
 
