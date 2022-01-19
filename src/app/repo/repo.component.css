@@ -1,0 +1,21 @@
+.repo-content{
+    background-color: lightgray;
+
+}
+.container input{
+    width: 25%;
+    margin-right: 30px;
+    height: 2.3em;
+}
+.container .form-input{
+    display: flex;
+    justify-content: center;
+    
+    
+}
+.container .form-input button{
+    height: 2.3em;
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+}
