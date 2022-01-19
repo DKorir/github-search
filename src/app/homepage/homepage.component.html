@@ -9,10 +9,10 @@
                     <h3>Username: {{userResults.login}} </h3>
                 </div>
                 <div class="followers">
-                    <h3>Followers: {{userResults.followers}} </h3>
+                    <h3>Followers: {{userResults.followers}}<i style="font-size:small;" class="fa fa-thumbs-up"></i> </h3>
                 </div>
                 <div class="following">
-                    <h3>Following: {{userResults.following}} </h3>
+                    <h3>Following: {{userResults.following}} <i style="font-size: small;" class="fa fa-thumbs-up"></i></h3>
                 </div>
                 <div class="public_repos">
                     <h3>Public_repos: {{userResults.public_repos}} </h3>
@@ -27,7 +27,7 @@
             <h1>                <h3 style="text-align: center;">{{userResults.login}}: Public Repositories</h3></h1>
             <hr style="color: blue; height: 3px; font-weight: bold;">
             <div class="description" *ngFor="let repositoryResult of repositoryResults">
-                <h3>Name: {{repositoryResult.name}} </h3>
+                <h3 appStyleDirective>Name: {{repositoryResult.name}} </h3>
                 <h4>Description: {{repositoryResult.description}} </h4>
                 <h3>Created on: {{repositoryResult.created_at|date}} </h3>
                 <a href="{{repositoryResult.html_url}}">

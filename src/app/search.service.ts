@@ -10,10 +10,9 @@ import { User } from './user';
 export class SearchService {
   users!: User;
   username!: string;
-  UpdateUser(username: string) {
-    throw new Error('Method not implemented.');
-  }
+
   githubusername:string="DKorir"
+  srepoos: any;
 
   constructor(private http:HttpClient) {
     // this.users = new User('','','',0,'', new Date(), 0, 0);
@@ -35,11 +34,29 @@ export class SearchService {
     })
     );
   }
-  //after
-  // UpdateUser(username:string){
-  //   this.username = username;
-  // }
-  // getUser(){
-  //   return this.http.get("https://api.github.com/users/" + this.username +"?client_id=" +"&client_secret")
-  // }
+ // after
+  UpdateUser(username:string){
+    this.username = username;
+  }
+  getUser(){
+    return this.http.get("https://api.github.com/users/" + this.username +"?client_id=" +"&client_secret")
+  }
+
+
+
+
+  findSearchRep(rname: any) {
+    let mise = new Promise<void>((resolve,) => {
+      this.http.get('https://api.github.com/users/' +
+      rname +'/repos?client_id='
+       +environment.gitApi
+        )
+        .toPromise().then((response:any) => {
+            this.srepoos= response;
+            resolve();
+          }
+        );
+    });
+    return mise;
+  }
 }

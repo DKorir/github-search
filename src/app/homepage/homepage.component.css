@@ -7,8 +7,9 @@
 .img{
     height: 300px;
     width: 300px;
-    background-color: blue;
+    background-color: gray;
     padding: 10%;
+    border-top-left-radius: 28px;
 }
 .data{
     height: 400px;
@@ -18,4 +19,5 @@
     border-bottom-right-radius: 28px;
     color: white;
     font-weight: bold;
+    
 }

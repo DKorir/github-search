@@ -1,1 +1,24 @@
-<p>repo works!</p>
+<div class="container-fluid">    
+       
+            
+    <form (ngSubmit)="Rep()"  #formInputs="ngForm">
+
+        <input type="text" class="form-control" ngModel name="search" placeholder="Github username "><br>
+        <button type="submit"  class="btn btn-warning">Search Repositories</button><br><br>
+
+    </form>         
+
+<div class="row" *ngIf="r">
+<div  *ngFor="let repoos of fetchrrr; ">
+
+       
+        <h5 appStyleDirective> Description: {{ repoos.description }}</h5>
+        <h5> Language: {{ repoos.language }}</h5>
+        <h5> Created On: {{ repoos.created_at | date }}</h5>
+
+      
+      
+
+
+
+

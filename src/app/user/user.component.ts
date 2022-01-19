@@ -16,13 +16,13 @@ export class UserComponent implements OnInit {
   constructor(private myService:SearchService) { }
 
 
-  // findUser(){
-  //   this.myService.UpdateUser(this.username);
-  //   this.myService.getUser().subscribe((user:any)=>{
-  //     console.log(user);
-  //     this.user = user;
-  //   });
-  // }
+  findUser(){
+    this.myService.UpdateUser(this.username);
+    this.myService.getUser().subscribe((user:any)=>{
+      console.log(user);
+      this.user = user;
+    });
+  }
 
   ngOnInit(): void {
   }
